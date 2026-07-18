@@ -1,28 +1,92 @@
-BSD 3-Clause License
+QLAC — a low-latency lossless audio codec
+Copyright (C) 2025  Leonardo Severi
 
-Copyright (c) 2026, leosev
+========================================================================
+Overview
+========================================================================
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
+QLAC is a fork of libFLAC 1.5.0, the reference FLAC codec library, which
+is distributed under the Xiph.Org BSD-like license (a BSD-3-Clause-family
+license). QLAC is distributed under the same BSD-3-Clause / Xiph-style
+terms.
 
-1. Redistributions of source code must retain the above copyright notice, this
-   list of conditions and the following disclaimer.
+The QLAC source tree combines two bodies of code:
 
-2. Redistributions in binary form must reproduce the above copyright notice,
-   this list of conditions and the following disclaimer in the documentation
-   and/or other materials provided with the distribution.
+  1. files derived from libFLAC 1.5.0, and
+  2. original QLAC files written for this project.
 
-3. Neither the name of the copyright holder nor the names of its
-   contributors may be used to endorse or promote products derived from
-   this software without specific prior written permission.
+Every source file states in its header which of the two applies to it.
+The per-file provenance table in FORK_NOTES.md records, for each file,
+whether it is FLAC-derived or QLAC-original and what was changed.
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+========================================================================
+1. FLAC-derived files
+========================================================================
+
+Files derived from libFLAC 1.5.0 retain the copyright of their original
+authors:
+
+    Copyright (C) 2000-2009  Josh Coalson
+    Copyright (C) 2011-2025  the Xiph.Org Foundation
+
+These files remain licensed under the Xiph.Org BSD-like license, the full
+text of which is reproduced in the file COPYING.Xiph in this
+distribution.
+
+Two kinds of change were made to these files for QLAC:
+
+  - Mechanical renames, principally the renaming of the FLAC__* symbol
+    namespace to QLAC__*.
+
+  - In some files, substantial modifications beyond mechanical renaming.
+
+All such modifications are:
+
+    Copyright (C) 2025  Leonardo Severi
+
+and are contributed under the same Xiph.Org BSD-like terms that already
+govern the file (COPYING.Xiph). The original copyright and license
+notices in these files are retained.
+
+========================================================================
+2. Original QLAC files
+========================================================================
+
+Files written originally for QLAC (for example, the added block-codec
+code) are:
+
+    Copyright (C) 2025  Leonardo Severi
+
+and are licensed under the 3-clause BSD license, the full text of which
+is reproduced in the file COPYING.QLAC in this distribution.
+
+========================================================================
+Relationship between the two licenses
+========================================================================
+
+Both COPYING.Xiph and COPYING.QLAC are members of the BSD-3-Clause
+license family and impose the same substantive conditions:
+
+  - redistributions must retain the copyright notice, this list of
+    conditions, and the warranty disclaimer;
+  - the names of the copyright holders and contributors may not be used
+    to endorse or promote derived products without prior written
+    permission;
+  - the software is provided "as is", without warranty, and the
+    copyright holders and contributors are not liable for damages.
+
+They differ only in the named copyright holder. The combined work may be
+redistributed under these terms.
+
+========================================================================
+Where to look
+========================================================================
+
+  FORK_NOTES.md   Per-file provenance table (FLAC-derived vs.
+                  QLAC-original, and what changed in each file).
+  COPYING.Xiph    Full text of the Xiph.Org BSD-like license
+                  (FLAC-derived files).
+  COPYING.QLAC    Full text of the QLAC 3-clause BSD license
+                  (QLAC-original files and QLAC modifications).
+  NOTICE          Concise attribution and funding acknowledgment.
+  AUTHORS         Authorship and contributor credits.

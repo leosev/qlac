@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use QLAC in your research, please cite the accompanying paper and/or the software."
+title: QLAC
+abstract: "QLAC is a low-latency, block-reentrant lossless audio codec for Networked Music Performance, derived from FLAC."
+type: software
+authors:
+  - family-names: Severi
+    given-names: Leonardo
+    email: dev.leosev@gmail.com
+    affiliation: "Politecnico di Torino"
+version: 0.1.0
+date-released: 2026-07-16
+license: BSD-3-Clause
+repository-code: "https://github.com/leosev/qlac"
+url: "https://github.com/leosev/qlac"
+keywords:
+  - lossless audio
+  - audio codec
+  - networked music performance
+  - low latency
+  - FLAC
+# Maintainer: the accompanying paper is not yet published.
+preferred-citation:
+  type: article
+  title: "Wasted Bandwidth: The Case for Lossless Audio in Networked Music Performance"
+  authors:
+    - family-names: Severi
+      given-names: Leonardo
+      email: dev.leosev@gmail.com
+      affiliation: "Politecnico di Torino"
+  year: 2026

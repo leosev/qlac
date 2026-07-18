@@ -1,0 +1,9 @@
+build**
+
+# CMake / C/C++ build artifacts
+build*/
+compile_commands.json
+.cache/
+
+# OS files
+.DS_Store

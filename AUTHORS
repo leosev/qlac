@@ -1,0 +1,58 @@
+QLAC — a low-latency lossless audio codec
+Author and maintainer: Leonardo Severi <dev.leosev@gmail.com>
+
+QLAC is derived from the FLAC reference implementation (libFLAC 1.5.0).
+It combines files derived from libFLAC with original QLAC code. The
+FLAC-derived files retain their original copyright and are used under the
+Xiph.Org BSD-like license (see COPYING.Xiph). Modifications to those
+files and all original QLAC code are Copyright (C) 2025 Leonardo Severi
+and are licensed under the 3-clause BSD license (see COPYING.QLAC). See
+LICENSE for how the two bodies of code are combined and which license
+applies to each source file.
+
+========================================================================
+FLAC contributors (upstream)
+========================================================================
+
+The following credits are retained from the FLAC project for the code
+QLAC derives from. This list is not exhaustive; for a complete FLAC
+contribution history run `git shortlog -s` / `git log` on the upstream
+FLAC repository or visit https://gitlab.xiph.org/xiph/flac and
+https://github.com/xiph/flac/commits
+
+Original author: Josh Coalson <jcoalson@users.sourceforge.net>
+Maintainer 2012-2020: Erik de Castro Lopo <erikd@mega-nerd.com>
+Maintainer from 2022: Martijn van Beurden <mvanb1@gmail.com>
+
+Copyright (C) 2000-2009  Josh Coalson
+Copyright (C) 2011-2025  the Xiph.Org Foundation
+
+Website : https://www.xiph.org/flac/
+
+Other major contributors and their contributions:
+
+"lvqcl" <lvqcl@users.sourceforge.net>
+* Visual Studio build system.
+* Optimisations in the encoder and decoder.
+
+"Janne Hyvärinen" <cse@sci.fi>
+* Visual Studio build system.
+* Unicode handling on Windows.
+
+"Andrey Astafiev" <andrei@tvcell.ru>
+* Russian translation of the HTML documentation
+
+"Miroslav Lichvar" <lichvarm@phoenix.inf.upol.cz>
+* IA-32 assembly versions of several libFLAC routines
+
+"Brady Patterson" <bpat@users.sourceforge.net>
+* AIFF file support, PPC assembly versions of libFLAC routines
+
+"Daisuke Shimamura" <Daisuke_Shimamura@nifty.com>
+* i18n support in the XMMS plugin
+
+"X-Fixer" <x-fixer@narod.ru>
+* Configuration system, tag editing, and file info in the Winamp2 plugin
+
+"Matt Zimmerman" <mdz@debian.org>
+* Libtool/autoconf/automake make system, flac man page

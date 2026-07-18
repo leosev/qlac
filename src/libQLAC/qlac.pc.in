@@ -1,0 +1,12 @@
+# Part of QLAC; derived from libFLAC 1.5.0. See FORK_NOTES.md and LICENSE.
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: QLAC
+Description: Quick Lossless Audio Codec Library
+Version: @VERSION@
+Libs: -L${libdir} -lQLAC
+Libs.private: -lm @QLAC_STATIC_LIBS@
+Cflags: -I${includedir}

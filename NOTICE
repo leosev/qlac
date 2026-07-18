@@ -1,0 +1,40 @@
+QLAC — a low-latency lossless audio codec
+Copyright (C) 2025  Leonardo Severi <dev.leosev@gmail.com>
+
+------------------------------------------------------------------------
+Third-party attribution
+------------------------------------------------------------------------
+
+This product includes software derived from libFLAC 1.5.0, the reference
+FLAC codec library:
+
+    Copyright (C) 2000-2009  Josh Coalson
+    Copyright (C) 2011-2025  the Xiph.Org Foundation
+
+Those FLAC-derived files are used under the Xiph.Org BSD-like license,
+reproduced in the file COPYING.Xiph in this distribution.
+
+    FLAC: https://www.xiph.org/flac/
+
+------------------------------------------------------------------------
+QLAC modifications and original code
+------------------------------------------------------------------------
+
+Modifications to the FLAC-derived files and all original QLAC source code
+are:
+
+    Copyright (C) 2025  Leonardo Severi
+
+and are licensed under the 3-clause BSD license reproduced in the file
+COPYING.QLAC. See LICENSE for how the two bodies of code are combined and
+which license applies to each source file.
+
+------------------------------------------------------------------------
+Funding acknowledgment
+------------------------------------------------------------------------
+
+This work was supported by the MUSMET project, funded by the European
+Union's EIC Pathfinder Open scheme (grant agreement no. 101184379). Views
+and opinions expressed are those of the author only and do not
+necessarily reflect those of the European Union or the European
+Innovation Council.
