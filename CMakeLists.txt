@@ -18,6 +18,16 @@ option(WITH_OGG "ogg support (default: test for libogg)" OFF)
 option(BUILD_SHARED_LIBS "Build shared instead of static libraries" OFF)
 option(ENABLE_MULTITHREADING "Enable multithreading if pthreads is available" ON)
 
+# Tests and the assessment tools pull in extra dependencies (argparse,
+# libsndfile, pkg-config). Only build them by default when QLAC is the
+# top-level project; consumers using FetchContent/CPM get just the library.
+if(PROJECT_IS_TOP_LEVEL)
+    set(QLAC_BUILD_TESTS_DEFAULT ON)
+else()
+    set(QLAC_BUILD_TESTS_DEFAULT OFF)
+endif()
+option(QLAC_BUILD_TESTS "Build QLAC tests and assessment tools" ${QLAC_BUILD_TESTS_DEFAULT})
+
 set(VERSION ${PROJECT_VERSION})
 
 if(NOT UNIX)
@@ -81,7 +91,6 @@ include(CheckLibraryExists)
 include(GNUInstallDirs)
 include(UseSystemExtensions)
 include(TestBigEndian)
-enable_testing()
 
 check_include_file("byteswap.h" HAVE_BYTESWAP_H)
 check_include_file("inttypes.h" HAVE_INTTYPES_H)
@@ -185,17 +194,24 @@ if(CMAKE_BUILD_TYPE STREQUAL Debug OR CMAKE_BUILD_TYPE STREQUAL RelWithDebInfo)
 endif()
 
 add_subdirectory("src/libQLAC")
-include(FetchContent)
 
-# argparse: header-only CLI parsing library, pulled in at configure time.
-FetchContent_Declare(
-    argparse
-    GIT_REPOSITORY https://github.com/p-ranav/argparse.git
-    GIT_TAG v3.1
-)
-FetchContent_MakeAvailable(argparse)
-add_subdirectory("tests")
-add_subdirectory("assessment")
+if(QLAC_BUILD_TESTS)
+    enable_testing()
+
+    include(FetchContent)
+
+    # argparse: header-only CLI parsing library, pulled in at configure time.
+    FetchContent_Declare(
+        argparse
+        GIT_REPOSITORY https://github.com/p-ranav/argparse.git
+        GIT_TAG v3.1
+    )
+    FetchContent_MakeAvailable(argparse)
+
+    add_subdirectory("tests")
+    add_subdirectory("assessment")
+endif()
+
 configure_file(config.cmake.h.in config.h)
 
 file(GLOB QLAC_HEADERS "include/QLAC/*.h")
