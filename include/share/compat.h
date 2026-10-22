@@ -1,7 +1,7 @@
 /* QLAC — a low-latency lossless audio codec
  *
  * This file is part of QLAC and is derived from libFLAC 1.5.0.  The changes
- * from upstream are mechanical only: FLAC__*/FLAC_* identifiers and include
+ * from upstream are mechanical only: FLAC__* /FLAC_* identifiers and include
  * paths were renamed to their QLAC equivalents.  The original libFLAC copyright
  * and license below are retained and continue to govern this file.  See
  * FORK_NOTES.md and LICENSE for details.
